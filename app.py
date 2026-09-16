@@ -15,7 +15,7 @@ fig = go.Figure(data=[go.Histogram(x=car_data['odometer'])])
 fig.update_layout(title_text='Distribución del Odómetro')
 
 # Mostrar el gráfico Plotly
-fig.show()
+st.plotly_chart(fig)
 
 
 # Leer los datos del archivo CSV
@@ -29,4 +29,4 @@ fig = go.Figure(data=[go.Scatter(x=car_data['odometer'], y=car_data['price'], mo
 fig.update_layout(title_text='Relación entre Odómetro y Precio')
 
 # Mostrar el gráfico Plotly
-fig.show()
+st.plotly_chart(fig)
