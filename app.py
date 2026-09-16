@@ -30,3 +30,9 @@ fig.update_layout(title_text='Relación entre Odómetro y Precio')
 
 # Mostrar el gráfico Plotly
 st.plotly_chart(fig)
+
+if st.button('Construir gráfico de dispersión'):
+    st.write('Creando un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
+    fig = go.Figure(data=[go.Scatter(x=car_data['odometer'], y=car_data['price'], mode='markers')])
+    fig.update_layout(title_text='Relación entre Odómetro y Precio')
+    st.plotly_chart(fig)
